@@ -11,6 +11,7 @@ class TestKinesisWithMoto(unittest.TestCase):
 
         # Create the Kinesis stream
         kinesis = boto3.client('kinesis', region_name='us-east-1')
+
         kinesis.create_stream(StreamName=stream_name, ShardCount=1)
 
         # Use KinesisWrapper
